@@ -51,7 +51,7 @@
                 type="button"
             >
                 <div class="ai-pd-container__icon"></div>
-                <img class="ai-pd-container__icon--alert" src="./../img/icon-alert.svg"></img>
+                <img class="ai-pd-container__icon--alert" src="https://raw.githubusercontent.com/infFITSDevelopment/pop-ad/refs/heads/main/icon-alert.svg"></img>
             </button>
                 <div
       style="
