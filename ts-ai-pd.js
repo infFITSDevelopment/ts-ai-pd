@@ -21,7 +21,7 @@
   var customCSS = document.createElement("link");
   customCSS.rel = "stylesheet";
   customCSS.type = "text/css";
-  customCSS.href = "./../css/iframe_ai_pd_style.css";
+  customCSS.href = "https://cdn.jsdelivr.net/gh/lmybs112/ts-iframe/css/iframe_ai_pd_style.css";
   document.head.appendChild(customCSS);
 
   $(function () {
