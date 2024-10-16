@@ -14,14 +14,14 @@
   var googleFontLink3 = document.createElement("link");
   googleFontLink3.rel = "stylesheet";
   googleFontLink3.href =
-    "https://fonts.googleapis.com/css2?family=Chocolate+Classical+Sans&family=Figtree:ital,wght@0,300..900;1,300..900&family=Noto+Sans+TC:wght@100..900&display=swap";
+    "https://fonts.googleapis.com/css2?family=Chocolate+Classical+Sans&family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+TC:wght@100..900&display=swap"
   document.head.appendChild(googleFontLink3);
 
   // 動態添加自定 CSS
   var customCSS = document.createElement("link");
   customCSS.rel = "stylesheet";
   customCSS.type = "text/css";
-  customCSS.href = "https://cdn.jsdelivr.net/gh/lmybs112/ts-iframe/css/iframe_ai_pd_style.css";
+  customCSS.href = "https://cdn.jsdelivr.net/gh/lmybs112/ts-iframe@1.0.0/css/iframe_ai_pd_style.css";
   document.head.appendChild(customCSS);
 
   $(function () {
@@ -90,9 +90,9 @@
               border: none;
               outline: none;
               z-index: 14;
-              border-radius: 10px;
+              border-radius: 21px;
             "
-            src="https://ts-iframe-8ysy.vercel.app/iframe_container_module.html"
+            src="./iframe_container_module.html"
           ></iframe>
         </div>
       </div>
