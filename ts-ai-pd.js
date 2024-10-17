@@ -21,7 +21,7 @@
   var customCSS = document.createElement("link");
   customCSS.rel = "stylesheet";
   customCSS.type = "text/css";
-  customCSS.href = "https://cdn.jsdelivr.net/gh/lmybs112/ts-iframe@1.0.2/css/iframe_ai_pd_style.css";
+  customCSS.href = "https://cdn.jsdelivr.net/gh/lmybs112/ts-iframe@1.0.3/css/iframe_ai_pd_style.css";
   document.head.appendChild(customCSS);
 
   $(function () {
@@ -30,7 +30,7 @@
       var origin = event.originalEvent.origin;
       // if (origin !== 'https://iframe所在的網址') return; // 避免跨域攻擊
       // 處理從 <iframe> 來的訊息
-      console.log("接收到來自 iframe 的訊息：", event.originalEvent.data);
+      // console.log("接收到來自 iframe 的訊息：", event.originalEvent.data);
       if (event.originalEvent.data.type === "result") {
         if (event.originalEvent.data.value) {
           $(".ai-pd-container__trigger").addClass(
@@ -80,7 +80,7 @@
         "
       >
         <div id="tryon">
-          <iframe
+           <iframe
             id="inffits_tryon_window"
             style="
               width: 100%;
@@ -170,11 +170,7 @@
     </style>
       `;
     document.body.insertAdjacentHTML("beforeend", aiSearchPdTemplate);
-    $(".ai-pd-container__trigger").on("touchstart click", function (event) {
-      // 防止點擊事件在觸摸設備上被觸發
-      if (event.type === "touchstart") {
-        event.preventDefault(); // 阻止後續 click 事件觸發
-      }
+    $(".ai-pd-container__trigger").on("pointerdown", function (event) {
       if ($(this).hasClass("ai-pd-container__trigger--search")) {
         $("#inffits_cblock").parent().fadeIn();
       } else {
