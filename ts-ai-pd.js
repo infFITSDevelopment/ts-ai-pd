@@ -14,14 +14,15 @@
   var googleFontLink3 = document.createElement("link");
   googleFontLink3.rel = "stylesheet";
   googleFontLink3.href =
-    "https://fonts.googleapis.com/css2?family=Chocolate+Classical+Sans&family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+TC:wght@100..900&display=swap"
+    "https://fonts.googleapis.com/css2?family=Chocolate+Classical+Sans&family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap";
   document.head.appendChild(googleFontLink3);
 
   // 動態添加自定 CSS
   var customCSS = document.createElement("link");
   customCSS.rel = "stylesheet";
   customCSS.type = "text/css";
-  customCSS.href = "https://cdn.jsdelivr.net/gh/lmybs112/ts-iframe@1.0.4/css/iframe_ai_pd_style.css";
+  // customCSS.href = "./../css/iframe_ai_pd_style.css";
+  customCSS.href = "https://cdn.jsdelivr.net/gh/lmybs112/ts-iframe@1.0.5/css/iframe_ai_pd_style.css";
   document.head.appendChild(customCSS);
 
   $(function () {
@@ -90,7 +91,6 @@
               border: none;
               outline: none;
               z-index: 14;
-              border-radius: 21px;
             "
             src="https://ts-iframe-8ysy.vercel.app/iframe_container_module.html"
           ></iframe>
@@ -98,35 +98,49 @@
       </div>
     </div>
     </div>
-    <style media="screen and (min-height:721px)">
-      #inffits_cblock {
-        position: fixed;
-        right: 0;
-        bottom: 0;
-        height: 720px;
-        width: 480px !important;
-      }
-      #tryon {
-        margin: auto;
-        height: 720px;
-        width: 480px !important;
-      }
-    </style>
-    <style media="screen and (min-width: 441px) and (max-height:720px)">
-      #inffits_cblock {
+    // <style media="screen and (min-height:721px)">
+    //   #inffits_cblock {
+    //     position: fixed;
+    //     right: 0;
+    //     bottom: 0;
+    //     height: 720px;
+    //     width: 480px !important;
+    //   }
+    //   #tryon {
+    //     margin: auto;
+    //     height: 720px;
+    //     width: 480px !important;
+    //   }
+    // </style>
+    // <style media="screen and (min-width: 441px) and (max-height:720px)">
+    //   #inffits_cblock {
+    //     position: fixed;
+    //     right: 0;
+    //     bottom: 0;
+    //     height: 700px;
+    //     width: 440px !important;
+    //   }
+    //   #tryon {
+    //     margin: auto;
+    //     height: 700px;
+    //     width: 440px !important;
+    //   }
+    // </style>
+        <style media="screen and (min-width: 480px)">
+      x#inffits_cblock {
         position: fixed;
         right: 0;
         bottom: 0;
         height: 700px;
-        width: 440px !important;
+        width: 480px !important;
       }
       #tryon {
         margin: auto;
         height: 700px;
-        width: 440px !important;
+        width: 480px !important;
       }
-    </style>
-    <style media="screen and (min-width: 401px) and (max-width: 440px)">
+        </style>
+    <style media="screen and (min-width: 401px) and (max-width: 480px)">
       #inffits_cblock {
         position: fixed;
         right: 0;
