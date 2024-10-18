@@ -22,7 +22,7 @@
   customCSS.rel = "stylesheet";
   customCSS.type = "text/css";
   // customCSS.href = "./../css/iframe_ai_pd_style.css";
-  customCSS.href = "https://cdn.jsdelivr.net/gh/lmybs112/ts-iframe@1.0.5/css/iframe_ai_pd_style.css";
+  customCSS.href = "https://cdn.jsdelivr.net/gh/lmybs112/ts-iframe@1.0.6/css/iframe_ai_pd_style.css";
   document.head.appendChild(customCSS);
 
   $(function () {
@@ -98,36 +98,8 @@
       </div>
     </div>
     </div>
-    // <style media="screen and (min-height:721px)">
-    //   #inffits_cblock {
-    //     position: fixed;
-    //     right: 0;
-    //     bottom: 0;
-    //     height: 720px;
-    //     width: 480px !important;
-    //   }
-    //   #tryon {
-    //     margin: auto;
-    //     height: 720px;
-    //     width: 480px !important;
-    //   }
-    // </style>
-    // <style media="screen and (min-width: 441px) and (max-height:720px)">
-    //   #inffits_cblock {
-    //     position: fixed;
-    //     right: 0;
-    //     bottom: 0;
-    //     height: 700px;
-    //     width: 440px !important;
-    //   }
-    //   #tryon {
-    //     margin: auto;
-    //     height: 700px;
-    //     width: 440px !important;
-    //   }
-    // </style>
-        <style media="screen and (min-width: 480px)">
-      x#inffits_cblock {
+    <style media="screen and (min-width: 480px)">
+      #inffits_cblock {
         position: fixed;
         right: 0;
         bottom: 0;
@@ -140,46 +112,19 @@
         width: 480px !important;
       }
         </style>
-    <style media="screen and (min-width: 401px) and (max-width: 480px)">
-      #inffits_cblock {
-        position: fixed;
-        right: 0;
-        bottom: 0;
-        height: 640px;
-        width: 400px !important;
-      }
-      #tryon {
-        margin: auto;
-        height: 640px;
-        width: 400px !important;
-      }
-    </style>
-    <style media="screen and (min-width: 361px) and (max-width: 400px)">
-      #inffits_cblock {
-        position: fixed;
-        right: 0;
-        bottom: 0;
-        height: 600px;
-        width: 360px !important;
-      }
-      #tryon {
-        margin: auto;
-        height: 600px;
-        width: 360px !important;
-      }
-    </style>
-    <style media="screen and (max-width: 360px)">
+
+    <style media="screen and (min-width: 355px) and (max-width: 479px)">
       #inffits_cblock {
         position: fixed;
         right: 0;
         bottom: 0;
         height: 580px;
-        width: 320px !important;
+        width: 355px !important;
       }
       #tryon {
         margin: auto;
         height: 580px;
-        width: 320px !important;
+        width: 355px !important;
       }
     </style>
       `;
