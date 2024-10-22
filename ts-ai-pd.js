@@ -22,7 +22,7 @@
   customCSS.rel = "stylesheet";
   customCSS.type = "text/css";
   // customCSS.href = "./../css/iframe_ai_pd_style.css";
-  customCSS.href = "https://cdn.jsdelivr.net/gh/lmybs112/ts-iframe@1.0.6/css/iframe_ai_pd_style.css";
+  customCSS.href = "https://cdn.jsdelivr.net/gh/lmybs112/ts-iframe@1.0.7/css/iframe_ai_pd_style.css";
   document.head.appendChild(customCSS);
 
   $(function () {
@@ -81,7 +81,7 @@
         "
       >
         <div id="tryon">
-           <iframe
+          <iframe
             id="inffits_tryon_window"
             style="
               width: 100%;
@@ -92,8 +92,9 @@
               outline: none;
               z-index: 14;
             "
-            src="https://ts-iframe-8ysy.vercel.app/iframe_container_module.html"
+           src="https://ts-iframe-8ysy.vercel.app/iframe_container_module.html"
           ></iframe>
+
         </div>
       </div>
     </div>
