@@ -22,7 +22,7 @@
   customCSS.rel = "stylesheet";
   customCSS.type = "text/css";
   // customCSS.href = "./../css/iframe_ai_pd_style.css";
-  customCSS.href = "https://cdn.jsdelivr.net/gh/lmybs112/ts-iframe@1.0.7/css/iframe_ai_pd_style.css";
+  customCSS.href = "https://cdn.jsdelivr.net/gh/lmybs112/ts-iframe@1.0.8/css/iframe_ai_pd_style.css";
   document.head.appendChild(customCSS);
 
   $(function () {
