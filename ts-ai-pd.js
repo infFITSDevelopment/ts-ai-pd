@@ -132,14 +132,22 @@
         const iframeElement = document.getElementById("inffits_tryon_window");
         if (iframeElement) {
           const iframe_container = iframeElement.contentWindow;
+         // 透過 prompt 輸入 id 和 brand
+            const id = prompt("請輸入 ID：", "INFS_All");
+            const brand = prompt("請輸入品牌名稱：", "INFS");
 
-          // 確保 iframe 加載完成再傳送 postMessage
-          iframeElement.onload = () => {
             const iframe_preview_obj = {
-              id: "INFS_All",
+              id: id || "INFS_All",
               header: "from_preview",
-              brand: "INFS",
+              brand: brand || "INFS",
             };
+          // // 確保 iframe 加載完成再傳送 postMessage
+          // iframeElement.onload = () => {
+          //   const iframe_preview_obj = {
+          //     id: "INFS_All",
+          //     header: "from_preview",
+          //     brand: "INFS",
+          //   };
 
             // 傳送 postMessage 到 iframe
             iframe_container.postMessage(iframe_preview_obj, "*");
