@@ -1,4 +1,4 @@
-;(function ($) {
+    ;(function ($) {
       // 動態添加 Google 字體連結
       var googleFontLink = document.createElement("link");
       googleFontLink.rel = "preconnect";
@@ -21,8 +21,8 @@
       var customCSS = document.createElement("link");
       customCSS.rel = "stylesheet";
       customCSS.type = "text/css";
-      customCSS.href = "./../css/iframe_ai_pd_style.css";
-      //   customCSS.href = "https://cdn.jsdelivr.net/gh/lmybs112/ts-iframe@1.0.8/css/iframe_ai_pd_style.css";
+      // customCSS.href = "./../css/iframe_ai_pd_style.css";
+        customCSS.href = "https://cdn.jsdelivr.net/gh/lmybs112/ts-iframe@1.0.9/css/iframe_ai_pd_style.css";
       document.head.appendChild(customCSS);
 
       $(function () {
@@ -89,7 +89,7 @@
                 max-width: 95vw;
                 margin: 0 auto;
             "
-           src="./iframe_container_module.html"
+           src="https://ts-iframe-8ysy.vercel.app/iframe_container_module.html"
           ></iframe>
 
         </div>
@@ -177,3 +177,4 @@
         }
       });
     })(jQuery);
+ 
