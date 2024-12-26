@@ -22,7 +22,8 @@
       customCSS.rel = "stylesheet";
       customCSS.type = "text/css";
       // customCSS.href = "./../css/iframe_ai_pd_style.css";
-        customCSS.href = "https://cdn.jsdelivr.net/gh/lmybs112/ts-iframe@1.0.9/css/iframe_ai_pd_style.css";
+      customCSS.href =
+        "https://cdn.jsdelivr.net/gh/lmybs112/ts-iframe@1.0.9/css/iframe_ai_pd_style.css";
       document.head.appendChild(customCSS);
 
       $(function () {
@@ -132,7 +133,10 @@
         const iframeElement = document.getElementById("inffits_tryon_window");
         if (iframeElement) {
           const iframe_container = iframeElement.contentWindow;
-         // 透過 prompt 輸入 id 和 brand
+
+          // 確保 iframe 加載完成再傳送 postMessage
+          iframeElement.onload = () => {
+            // 透過 prompt 輸入 id 和 brand
             const id = prompt("請輸入 ID：", "INFS_All");
             const brand = prompt("請輸入品牌名稱：", "INFS");
 
@@ -141,17 +145,15 @@
               header: "from_preview",
               brand: brand || "INFS",
             };
-          // // 確保 iframe 加載完成再傳送 postMessage
-          // iframeElement.onload = () => {
-          //   const iframe_preview_obj = {
-          //     id: "INFS_All",
-          //     header: "from_preview",
-          //     brand: "INFS",
-          //   };
+            // const iframe_preview_obj = {
+            //   id: "INFS_All",
+            //   header: "from_preview",
+            //   brand: "INFS",
+            // };
 
             // 傳送 postMessage 到 iframe
             iframe_container.postMessage(iframe_preview_obj, "*");
-          };
+          }
         } else {
           console.error("iframe 元素未找到，無法傳送 postMessage");
         }
@@ -185,4 +187,3 @@
         }
       });
     })(jQuery);
- 
