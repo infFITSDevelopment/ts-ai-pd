@@ -117,12 +117,12 @@
         position: fixed;
         right: 0;
         bottom: 0;
-        height: 580px;
+        // height: 580px;
         // width: 355px !important;
       }
       #tryon {
         margin: auto;
-        height: 580px;
+        // height: 580px;
         width: 355px !important;
       }
     </style>
