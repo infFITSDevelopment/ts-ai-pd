@@ -67,6 +67,7 @@
         background: rgba(0, 0, 0, 0.5);
         transform: none;
       "
+      id="inffits_cblock--overlay"
     >
       <div
         id="inffits_cblock"
@@ -123,6 +124,7 @@
       #tryon {
         margin: auto;
         // height: 580px;
+        // height: 100vh;
         width: 355px !important;
       }
     </style>
@@ -153,7 +155,7 @@
 
             // 傳送 postMessage 到 iframe
             iframe_container.postMessage(iframe_preview_obj, "*");
-          }
+          };
         } else {
           console.error("iframe 元素未找到，無法傳送 postMessage");
         }
@@ -165,6 +167,12 @@
             $("#inffits_cblock").parent().fadeOut();
           }
           $(this).toggleClass(
+            "ai-pd-container__trigger--search ai-pd-container__trigger--close"
+          );
+        });
+        $("#inffits_cblock--overlay").on("pointerdown", function (event) {
+          $("#inffits_cblock").parent().fadeOut();
+          $(".ai-pd-container__trigger").toggleClass(
             "ai-pd-container__trigger--search ai-pd-container__trigger--close"
           );
         });
