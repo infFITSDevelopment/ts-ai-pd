@@ -162,9 +162,11 @@
 
         $(".ai-pd-container__trigger").on("pointerdown", function (event) {
           if ($(this).hasClass("ai-pd-container__trigger--search")) {
-            $("#inffits_cblock").parent().fadeIn();
+            $("#inffits_cblock--overlay").fadeIn();
+            // $("#inffits_cblock").parent().fadeIn();
           } else {
-            $("#inffits_cblock").parent().fadeOut();
+            $("#inffits_cblock--overlay").fadeOut();
+            // $("#inffits_cblock").parent().fadeOut();
           }
           $(this).toggleClass(
             "ai-pd-container__trigger--search ai-pd-container__trigger--close"
