@@ -23,7 +23,7 @@
       customCSS.type = "text/css";
       // customCSS.href = "./../css/iframe_ai_pd_style.css";
       customCSS.href =
-        "https://cdn.jsdelivr.net/gh/lmybs112/ts-iframe@1.0.10/css/iframe_ai_pd_style.css";
+        "https://cdn.jsdelivr.net/gh/lmybs112/ts-iframe@1.0.11/css/iframe_ai_pd_style.css";
       document.head.appendChild(customCSS);
 
       $(function () {
@@ -44,8 +44,17 @@
               );
             }
           }
+          if (event.originalEvent.data.type === "closeModal") {
+            if (event.originalEvent.data.value) {
+              $("#inffits_cblock--overlay").fadeOut();
+              $(".ai-pd-container__trigger").toggleClass(
+                "ai-pd-container__trigger--search ai-pd-container__trigger--close"
+              );
+            }
+          }
         });
         // 添加 html template
+        // https://ts-iframe-8ysy.vercel.app
         var aiSearchPdTemplate = `
             <div class="ai-pd-container">
             <button
@@ -139,19 +148,20 @@
           // 確保 iframe 加載完成再傳送 postMessage
           iframeElement.onload = () => {
             // 透過 prompt 輸入 id 和 brand
-            const id = prompt("請輸入 ID：", "INFS_All");
-            const brand = prompt("請輸入品牌名稱：", "INFS");
+            // const id = prompt("請輸入 ID：", "INFS_All");
+            // const brand = prompt("請輸入品牌名稱：", "INFS");
+
+            // const iframe_preview_obj = {
+            //   id: id || "INFS_All",
+            //   header: "from_preview",
+            //   brand: brand || "INFS",
+            // };
 
             const iframe_preview_obj = {
-              id: id || "INFS_All",
+              id: "INFS_All",
               header: "from_preview",
-              brand: brand || "INFS",
+              brand: "INFS",
             };
-            // const iframe_preview_obj = {
-            //   id: "INFS_All",
-            //   header: "from_preview",
-            //   brand: "INFS",
-            // };
 
             // 傳送 postMessage 到 iframe
             iframe_container.postMessage(iframe_preview_obj, "*");
@@ -163,17 +173,15 @@
         $(".ai-pd-container__trigger").on("pointerdown", function (event) {
           if ($(this).hasClass("ai-pd-container__trigger--search")) {
             $("#inffits_cblock--overlay").fadeIn();
-            // $("#inffits_cblock").parent().fadeIn();
           } else {
             $("#inffits_cblock--overlay").fadeOut();
-            // $("#inffits_cblock").parent().fadeOut();
           }
           $(this).toggleClass(
             "ai-pd-container__trigger--search ai-pd-container__trigger--close"
           );
         });
         $("#inffits_cblock--overlay").on("pointerdown", function (event) {
-          $("#inffits_cblock").parent().fadeOut();
+          $("#inffits_cblock--overlay").fadeOut();
           $(".ai-pd-container__trigger").toggleClass(
             "ai-pd-container__trigger--search ai-pd-container__trigger--close"
           );
@@ -197,3 +205,4 @@
         }
       });
     })(jQuery);
+ 
