@@ -147,7 +147,7 @@
 
           // 確保 iframe 加載完成再傳送 postMessage
           iframeElement.onload = () => {
-            透過 prompt 輸入 id 和 brand
+            // 透過 prompt 輸入 id 和 brand
             const id = prompt("請輸入 ID：", "INFS_All");
             const brand = prompt("請輸入品牌名稱：", "INFS");
 
